@@ -65,7 +65,7 @@ A powerful VS Code extension that simplifies **Adobe Experience Manager** (AEM) 
 
 ---
 ## 🧱 Example Output Structure
-
+![Usage Demo](images/crxde.png)
 ```plaintext
 my-cf-folder/
 ├── .content.xml
@@ -80,9 +80,6 @@ my-cf-folder/
                 └── my-article/
                     └── .content.xml
 ```
-
----
-
 
 ---
 

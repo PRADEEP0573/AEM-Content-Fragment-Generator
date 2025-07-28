@@ -34,11 +34,19 @@ function activate(context) {
             {
                 enableScripts: true,
                 retainContextWhenHidden: true,
-                localResourceRoots: [vscode.Uri.file(path.join(context.extensionPath, 'media'))]
+                localResourceRoots: [
+                    vscode.Uri.file(path.join(context.extensionPath, 'images')),
+                    vscode.Uri.file(path.join(context.extensionPath, 'media'))
+                ]
             }
         );
 
-        currentPanel.webview.html = getWebviewContent(fieldTypes, validationTypes, defaultFields);
+        // Get the URI for the background image
+        const bgImageUri = currentPanel.webview.asWebviewUri(
+            vscode.Uri.file(path.join(context.extensionPath, 'images', 'PADDE.png'))
+        );
+
+        currentPanel.webview.html = getWebviewContent(fieldTypes, validationTypes, defaultFields, bgImageUri);
 
         currentPanel.webview.onDidReceiveMessage(
             async (message) => {
@@ -361,7 +369,7 @@ function generateFieldsXml(fields) {
     }).join('\n        ');
 }
 
-function getWebviewContent(fieldTypes = [], validationTypes = [], defaultFields = []) {
+function getWebviewContent(fieldTypes = [], validationTypes = [], defaultFields = [], bgImageUri) {
     // Generate field type options
     const fieldTypeOptions = fieldTypes.map(type => 
         `<option value="${type.value}">${type.label}</option>`
@@ -428,11 +436,9 @@ function getWebviewContent(fieldTypes = [], validationTypes = [], defaultFields 
             font-size: 14px;
             line-height: 1.6;
             color: var(--text);
-            background: url('https://github.com/PRADEEP0573/AEM-Content-Fragment-Generator/blob/main/images/PADDE.png');
-            background-color: #f9fafb;
-            background-repeat: no-repeat;
+            background: url('${bgImageUri}') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
+            background-color: #f9fafb;
             margin: 0;
             padding: 0;
             min-height: 100vh;
