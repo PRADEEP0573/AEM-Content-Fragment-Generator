@@ -1,0 +1,212 @@
+{
+    "name": "aem-content-fragment-generator",
+    "displayName": "AEM Content Fragment Generator",
+    "description": "Generate AEM Content Fragments with real-time preview and customizable fields",
+    "version": "1.0.0",
+    "publisher": "padde-software",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "author": {
+        "name": "Pradeep Sapparapu",
+        "email": "pradeepdeep057@gmail.com",
+        "url": "https://github.com/PRADEEP0573"
+    },
+    "homepage": "https://github.com/PRADEEP0573/AEM-Sling-Models-HTL-Snippets-GraphQL-Generator#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/PRADEEP0573/AEM-Sling-Models-HTL-Snippets-GraphQL-Generator.git"
+    },
+    "bugs": {
+        "url": "https://github.com/PRADEEP0573/AEM-Sling-Models-HTL-Snippets-GraphQL-Generator/issues"
+    },
+    "galleryBanner": {
+        "color": "#007acc",
+        "theme": "dark"
+    },
+    "icon": "images/icon.png",
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+        "Other",
+        "Chat",
+        "Extension Packs"
+    ],
+    "keywords": [
+        "AEM",
+        "Adobe Experience Manager",
+        "HTL",
+        "Sightly",
+        "Sling",
+        "GraphQL",
+        "SPA",
+        "JCR",
+        "CRX",
+        "CMS",
+        "Component",
+        "Java",
+        "Maven",
+        "OSGi",
+        "AEMaaCS",
+        "Content Fragments",
+        "Experience Fragments",
+        "Sling Models",
+        "AEM Components",
+        "AEM Development",
+        "Headless CMS",
+        "AEM Headless",
+        "AEM SPA Editor",
+        "AEM Dispatcher",
+        "AEM Cloud",
+        "AEM SDK",
+        "AEM Archetype",
+        "AEM Core Components",
+        "AEM Snippets",
+        "AEM Developer Tools"
+    ],
+    "activationEvents": [
+        "onCommand:aem-cf-builder.createModel"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "aem-cf-builder.createModel",
+                "title": "Create AEM Content Fragment",
+                "category": "PS"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "aem-cf-builder.createModel",
+                    "when": "explorerResourceIsFolder",
+                    "group": "aem-cf-builder"
+                }
+            ]
+        },
+        "configuration": {
+            "title": "AEM Content Fragment Generator",
+            "properties": {
+                "aemCfGenerator.fieldTypes": {
+                    "type": "array",
+                    "default": [
+                        {
+                            "label": "Single Line Text",
+                            "value": "text-single"
+                        },
+                        {
+                            "label": "Multi-line Text",
+                            "value": "text-multi"
+                        },
+                        {
+                            "label": "Number",
+                            "value": "number"
+                        },
+                        {
+                            "label": "Boolean",
+                            "value": "boolean"
+                        },
+                        {
+                            "label": "Date/Time",
+                            "value": "date"
+                        },
+                        {
+                            "label": "Enumeration",
+                            "value": "enumeration"
+                        }
+                    ],
+                    "description": "Available field types for content fragments"
+                },
+                "aemCfGenerator.validationTypes": {
+                    "type": "array",
+                    "default": [
+                        {
+                            "label": "None",
+                            "value": "none"
+                        },
+                        {
+                            "label": "Required",
+                            "value": "required"
+                        },
+                        {
+                            "label": "Email",
+                            "value": "email"
+                        },
+                        {
+                            "label": "URL",
+                            "value": "url"
+                        },
+                        {
+                            "label": "Numeric",
+                            "value": "numeric"
+                        },
+                        {
+                            "label": "Minimum Length",
+                            "value": "min-length"
+                        },
+                        {
+                            "label": "Maximum Length",
+                            "value": "max-length"
+                        }
+                    ],
+                    "description": "Available validation types for content fragment fields"
+                },
+                "aemCfGenerator.defaultFields": {
+                    "type": "array",
+                    "default": [
+                        {
+                            "name": "title",
+                            "type": "text",
+                            "required": true,
+                            "validation": "required",
+                            "defaultValue": ""
+                        },
+                        {
+                            "name": "description",
+                            "type": "multiline",
+                            "required": false,
+                            "validation": "none",
+                            "defaultValue": ""
+                        }
+                    ],
+                    "description": "Default fields for new content fragments"
+                },
+                "aemCfGenerator.defaultOutputPath": {
+                    "type": "string",
+                    "default": "jcr_root/content/dam/your-project/models",
+                    "description": "Default output path for generated content fragments"
+                },
+                "aemCfGenerator.projectName": {
+                    "type": "string",
+                    "default": "your-project",
+                    "description": "Default project name to be used in content fragment paths"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run package",
+        "compile": "webpack --mode production",
+        "watch": "webpack --mode development --watch",
+        "package": "webpack --mode production --devtool hidden-source-map",
+        "test": "node ./test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.4",
+        "@types/mocha": "^9.0.0",
+        "@types/node": "14.x",
+        "@types/vscode": "^1.60.0",
+        "eslint": "^7.27.0",
+        "glob": "^7.1.7",
+        "mocha": "^9.1.1",
+        "typescript": "^4.3.2",
+        "vscode-test": "^1.6.1",
+        "webpack": "^5.50.0",
+        "webpack-cli": "^4.7.2"
+    },
+    "dependencies": {
+        "fast-xml-parser": "^4.0.0"
+    }
+}
