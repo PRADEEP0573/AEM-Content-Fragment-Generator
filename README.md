@@ -94,7 +94,7 @@ Contributions are welcome! If you have suggestions, issues, or ideas, feel free 
 
 ## 📄 License
 
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** – see the [LICENSE](https://github.com/PRADEEP0573/AEM-Content-Fragment-Generator/blob/main/LICENSE) file for details.
 
 ---
 
@@ -106,7 +106,7 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
   <i>"I created this tool to make AEM development faster and more efficient. It's 100% free and open-source — share it with your team!"</i><br><br>
   <i>Made with ❤️ in Andhra Pradesh, India 🇮🇳</i><br>
   🔗 <a href="https://github.com/PRADEEP0573">GitHub</a> • 
-  📧 <a href="mailto:your@email.com">Email Me</a>  
+  📧 <a href="mailto:pradeepdeep057@gmail.com">Email Me</a>  
 </p>
 
 ---
@@ -114,7 +114,7 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 ## 🙏 Support
 
 If you find this tool helpful, please ⭐ star the repository and share it with your team!
-You can also [follow me on GitHub](https://github.com/PRADEEP0573/AEM-Component-Clientlib-Generator) for more AEM tools and updates.
+You can also [follow me on GitHub](https://github.com/PRADEEP0573/AEM-Content-Fragment-Generator) for more AEM tools and updates.
 
 <div style="text-align: center; margin: 20px 0;">
 <a href="https://www.buymeacoffee.com/FilesCompareMaster"><img src="https://img.buymeacoffee.com/button-api/?text=Buy+me+a+coffee&emoji=😍&slug=FilesCompareMaster&button_colour=BD5FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" width="200" title="Buy me a coffee"></a>

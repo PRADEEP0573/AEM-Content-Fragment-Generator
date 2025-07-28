@@ -13,13 +13,13 @@
         "email": "pradeepdeep057@gmail.com",
         "url": "https://github.com/PRADEEP0573"
     },
-    "homepage": "https://github.com/PRADEEP0573/AEM-Sling-Models-HTL-Snippets-GraphQL-Generator#readme",
+    "homepage": "https://github.com/PRADEEP0573/AEM-Content-Fragment-Generator#readme",
     "repository": {
         "type": "git",
-        "url": "https://github.com/PRADEEP0573/AEM-Sling-Models-HTL-Snippets-GraphQL-Generator.git"
+        "url": "https://github.com/PRADEEP0573/AEM-Content-Fragment-Generator.git"
     },
     "bugs": {
-        "url": "https://github.com/PRADEEP0573/AEM-Sling-Models-HTL-Snippets-GraphQL-Generator/issues"
+        "url": "https://github.com/PRADEEP0573/AEM-Content-Fragment-Generator/issues"
     },
     "galleryBanner": {
         "color": "#007acc",

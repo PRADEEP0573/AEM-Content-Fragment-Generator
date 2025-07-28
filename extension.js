@@ -428,7 +428,7 @@ function getWebviewContent(fieldTypes = [], validationTypes = [], defaultFields 
             font-size: 14px;
             line-height: 1.6;
             color: var(--text);
-            background: url('images/PADDE.png');
+            background: url('https://github.com/PRADEEP0573/AEM-Content-Fragment-Generator/blob/main/images/PADDE.png');
             background-color: #f9fafb;
             background-repeat: no-repeat;
             background-size: cover;
