@@ -50,8 +50,10 @@ A powerful VS Code extension that simplifies **Adobe Experience Manager** (AEM) 
    - Add default value if needed
 5. **👀 Preview** your model structure
 6. ⚡ Click **Generate** to create the files
-![Usage Demo](images/Sling.gif)
+   ![Usage Demo](https://raw.githubusercontent.com/PRADEEP0573/AEM-Content-Fragment-Generator/main/images/cf.gif)
+
 ---
+
 ## 🧩 Supported Field Types
 
 | Field Type       | Description          | Example                      |
@@ -64,8 +66,11 @@ A powerful VS Code extension that simplifies **Adobe Experience Manager** (AEM) 
 | Enumeration      | Dropdown selection   | Status, Category             |
 
 ---
+
 ## 🧱 Example Output Structure
+
 ![Usage Demo](images/crxde.png)
+
 ```plaintext
 my-cf-folder/
 ├── .content.xml
